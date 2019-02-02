@@ -71,9 +71,11 @@ function Circles(radius) {
   };
 
   Object.defineProperty(this, "defaultLocation", {
+    // getter
     get: () => {
       return defaultLocation;
     },
+    // Setter
     set: val => {
       if (!val.x && !val.y) {
         throw new Error("Invalid location.");
